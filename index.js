@@ -1,4 +1,4 @@
-let obj = [
+let array = [
   {
     dt: "2020-07-01",
     vami: "10000",
@@ -7527,5 +7527,76 @@ let obj = [
     rollingvol_bm_90: "",
   },
 ];
-console.log(obj);
-console.log("CHANAKYA");
+
+let finalArray = [];
+let arr2 = [];
+for (let i = 0; i < array.length; i++) {
+  const element = array[i];
+  const split = element.dt.split("-");
+  if (!arr2.includes(split[0])) {
+    arr2.push(split[0]);
+  }
+}
+// console.log(arr2);
+for (let i = 0; i < arr2.length; i++) {
+  let objMaxDate = {};
+
+  for (let j = 0; j < array.length; j++) {
+    const element = array[j];
+    const split = element.dt.split("-");
+    objMaxDate[split[1]] = split[2];
+  }
+  console.log(objMaxDate);
+
+  let changedArray = [];
+  for (let j = 0; j < array.length; j++) {
+    const element = array[j];
+    const split = element.dt.split("-");
+    if (objMaxDate[split[1]] == split[2]) {
+      changedArray.push(element);
+    }
+  }
+  finalArray = [...finalArray, changedArray];
+}
+console.log(finalArray);
+
+// let objMaxDate2021 = {};
+// let objMaxDate2022 = {};
+
+// for (let i = 0; i < array.length; i++) {
+//   const element = array[i];
+//   const split = element.dt.split("-");
+
+//   //  year = split[0];
+//   //  month = split[1];
+//   //  day = split[2];
+//   // console.log(split);
+//   if (split[0] == "2020") {
+//     continue;
+//   } else {
+//     if (split[0] == "2021") {
+//       objMaxDate2021[split[1]] = split[2];
+//     } else if (split[0] == "2022") {
+//       objMaxDate2022[split[1]] = split[2];
+//     }
+//   }
+// }
+// console.log(objMaxDate2021, "2021"); //Gives the properties and values of each month and last date of each month
+// console.log(objMaxDate2022, "2022"); //Gives the properties and values of each month and last date of each month
+
+// let changedArray = [];
+// for (let i = 0; i < array.length; i++) {
+//   const element = array[i];
+//   const split = element.dt.split("-");
+//   // console.log(split);
+//   if (split[0] == "2020") {
+//     continue;
+//   } else {
+//     if (split[0] == "2021" && objMaxDate2021[split[1]] == split[2]) {
+//       changedArray.push(element);
+//     } else if (split[0] == "2022" && objMaxDate2022[split[1]] == split[2]) {
+//       changedArray.push(element);
+//     }
+//   }
+// }
+// console.log(changedArray); //Result array of only last dates of a month

@@ -1,0 +1,133 @@
+let array = [
+  {
+    dt: "2018-01-29",
+    vami: "51365.61",
+    scenario_id: "959",
+    scenario_name: "S&P 600 SmallCap Portfolio",
+    previous_vami: "51514.44",
+    next_vami: "50932.47",
+    monthly_return: "-0.0028891563415527344",
+    fund_return: "-0.28",
+    drawdown: "-0.006915092",
+    rollingvol_fund_90: "",
+    rollingvol_bm_90: "",
+  },
+  {
+    dt: "2018-02-26",
+    vami: "49916.94",
+    scenario_id: "959",
+    scenario_name: "S&P 600 SmallCap Portfolio",
+    previous_vami: "49391.062",
+    next_vami: "49154.48",
+    monthly_return: "0.010647296905517578",
+    fund_return: "1.06",
+    drawdown: "-0.034923147",
+    rollingvol_fund_90: "",
+    rollingvol_bm_90: "",
+  },
+  {
+    dt: "2018-04-30",
+    vami: "51469.973",
+    scenario_id: "959",
+    scenario_name: "S&P 600 SmallCap Portfolio",
+    previous_vami: "51298.047",
+    next_vami: "51468.6",
+    monthly_return: "0.003351449966430664",
+    fund_return: "0.33",
+    drawdown: "-0.018828196",
+    rollingvol_fund_90: "",
+    rollingvol_bm_90: "",
+  },
+  {
+    dt: "2018-05-29",
+    vami: "54359.094",
+    scenario_id: "959",
+    scenario_name: "S&P 600 SmallCap Portfolio",
+    previous_vami: "54016.01",
+    next_vami: "54830.145",
+    monthly_return: "0.006351470947265625",
+    fund_return: "0.63",
+    drawdown: "-0.010256315",
+    rollingvol_fund_90: "",
+    rollingvol_bm_90: "",
+  },
+  {
+    dt: "2018-07-31",
+    vami: "56492.11",
+    scenario_id: "959",
+    scenario_name: "S&P 600 SmallCap Portfolio",
+    previous_vami: "56054.605",
+    next_vami: "56817.97",
+    monthly_return: "0.007804989814758301",
+    fund_return: "0.78",
+    drawdown: "-0.024459431",
+    rollingvol_fund_90: "",
+    rollingvol_bm_90: "",
+  },
+  {
+    dt: "2018-08-31",
+    vami: "59076.332",
+    scenario_id: "959",
+    scenario_name: "S&P 600 SmallCap Portfolio",
+    previous_vami: "58457.49",
+    next_vami: "59076.332",
+    monthly_return: "0.010586261749267578",
+    fund_return: "1.05",
+    drawdown: "0.0049507758",
+    rollingvol_fund_90: "",
+    rollingvol_bm_90: "",
+  },
+  {
+    dt: "2018-10-30",
+    vami: "53687.28",
+    scenario_id: "959",
+    scenario_name: "S&P 600 SmallCap Portfolio",
+    previous_vami: "53197.164",
+    next_vami: "54054.234",
+    monthly_return: "0.00921320915222168",
+    fund_return: "0.92",
+    drawdown: "-0.111877955",
+    rollingvol_fund_90: "",
+    rollingvol_bm_90: "",
+  },
+  {
+    dt: "2018-11-30",
+    vami: "54006.633",
+    scenario_id: "959",
+    scenario_name: "S&P 600 SmallCap Portfolio",
+    previous_vami: "54018.473",
+    next_vami: "54256.566",
+    monthly_return: "-0.00021916627883911133",
+    fund_return: "-0.02",
+    drawdown: "-0.10659508",
+    rollingvol_fund_90: "",
+    rollingvol_bm_90: "",
+  },
+  {
+    dt: "2018-12-31",
+    vami: "50793.9",
+    scenario_id: "959",
+    scenario_name: "S&P 600 SmallCap Portfolio",
+    previous_vami: "50433.926",
+    next_vami: "50716.41",
+    monthly_return: "0.0071375370025634766",
+    fund_return: "0.71",
+    drawdown: "-0.15974176",
+    rollingvol_fund_90: "",
+    rollingvol_bm_90: "",
+  },
+];
+
+let arrSplit = [];
+for (let j = 0; j < array.length; j++) {
+  const element = array[j];
+  const split = element.dt.split("-");
+  let month = split[1];
+  arrSplit.push(parseInt(month));
+}
+
+for (let j = 1; j <= 12; j++) {
+  if (arrSplit.includes(j)) {
+  }
+}
+console.log(arrSplit);
